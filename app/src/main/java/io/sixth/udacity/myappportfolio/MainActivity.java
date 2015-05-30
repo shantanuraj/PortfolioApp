@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button xyzButton;
     private Button capstoneButton;
 
+    private Toast toast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +40,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         Button button = (Button) v;
-        Toast.makeText(this,
+        if (toast != null) {
+            toast.cancel();
+        }
+        toast = Toast.makeText(this,
                 getString(R.string.launch) + " " + button.getText(),
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     private void setButtons() {

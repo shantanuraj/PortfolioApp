@@ -72,10 +72,8 @@
             android:id="@+id/button_capstone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.Button"
-            android:text="@string/app_capstone"
-            android:textColor="@color/button_background"
-            android:backgroundTint="@color/button_text"/>
+            android:theme="@style/AppTheme.Button.Capstone"
+            android:text="@string/app_capstone"/>
 
     </LinearLayout>
 
